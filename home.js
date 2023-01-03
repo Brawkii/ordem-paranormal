@@ -154,7 +154,23 @@ const sair = () => {
     msgPontos.classList.remove("add-msg-pontos")
 }
 
-//------------------------------------------------
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBmUo9TMwxsZunDLV9MvV31AB-VX-IayWk",
+  authDomain: "ficha-ordem-2.firebaseapp.com",
+  projectId: "ficha-ordem-2",
+  storageBucket: "ficha-ordem-2.appspot.com",
+  messagingSenderId: "996855123067",
+  appId: "1:996855123067:web:94495865df351be442e6de",
+  measurementId: "G-M8F72FE1ES"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 
 const clearInput = () => {
     for (let cont = 0; cont < weaponCharacteristics.length; cont++) {
